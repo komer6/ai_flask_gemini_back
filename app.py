@@ -19,7 +19,7 @@ def aishit(text):
     return(response)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": ["https://komer6.github.io/ai_flask_gemini_front", "http://localhost:5500"]}})
 @app.route('/post', methods=['POST'])
 def post():
     # Get the text from the POST request's JSON body
