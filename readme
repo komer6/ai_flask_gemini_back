@@ -1,0 +1,84 @@
+Flask AI Chatbot API
+
+Description
+
+This is a Flask-based API that utilizes Google's Gemini AI model via langchain_google_genai. The API takes user input and generates a response using Google's AI. It supports CORS to allow requests from different origins.
+
+Features
+
+Flask API with a POST endpoint (/post)
+
+Uses Google Gemini AI model (gemini-2.0-flash)
+
+Loads API key securely from environment variables
+
+Supports CORS for cross-origin requests
+
+Deployable on Render
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/yourrepository.git
+cd yourrepository
+
+Create a virtual environment:
+
+python -m venv venv
+source venv/bin/activate  # For macOS/Linux
+venv\Scripts\activate     # For Windows
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Create a .env file in the root directory and add your API key:
+
+GOOGLE_API_KEY=your-secret-key-here
+
+Running the Application
+
+Run the Flask app:
+
+python app.py
+
+The server will start on http://127.0.0.1:5000/.
+
+API Usage
+
+Endpoint: /post
+
+Method: POST
+
+Request Body (JSON):
+
+{
+  "text": "Your input text here"
+}
+
+Response (JSON):
+
+{
+  "response": "AI-generated response"
+}
+
+Deployment on Render
+
+Push your project to GitHub.
+
+Go to Render and create a new Web Service.
+
+Connect your GitHub repository.
+
+Set environment variables in the Render dashboard:
+
+GOOGLE_API_KEY: your actual API key.
+
+Deploy and test your API.
+
+Notes
+
+Make sure .env is added to .gitignore to prevent exposing your API key.
+with your apikey
+
